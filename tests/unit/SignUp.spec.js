@@ -19,10 +19,10 @@ describe("SignUp", () => {
     wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
     wrapper.vm.$nextTick();
-    const usernameInput = inputs.at(0);
-    const emailInput = inputs.at(1);
-    const passwordInput = inputs.at(2);
-    const confirmPasswordInput = inputs.at(3);
+    const usernameInput = inputs[0];
+    const emailInput = inputs[1];
+    const passwordInput = inputs[2];
+    const confirmPasswordInput = inputs[3];
 
     const Button = wrapper.findAllComponents({ name: "ElButton" });
     const signUpButton = Button.at(0);
@@ -45,10 +45,10 @@ describe("SignUp", () => {
     wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
     wrapper.vm.$nextTick();
-    const usernameInput = inputs.at(0);
-    const emailInput = inputs.at(1);
-    const passwordInput = inputs.at(2);
-    const confirmPasswordInput = inputs.at(3);
+   const usernameInput = inputs[0];
+    const emailInput = inputs[1];
+    const passwordInput = inputs[2];
+    const confirmPasswordInput = inputs[3];
 
     await wrapper.vm.$nextTick();
 
@@ -86,10 +86,10 @@ describe("SignUp", () => {
     wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
     wrapper.vm.$nextTick();
-    const usernameInput = inputs.at(0);
-    const emailInput = inputs.at(1);
-    const passwordInput = inputs.at(2);
-    const confirmPasswordInput = inputs.at(3);
+    const usernameInput = inputs[0];
+    const emailInput = inputs[1];
+    const passwordInput = inputs[2];
+    const confirmPasswordInput = inputs[3];
 
     await usernameInput.setValue("testuser");
     await passwordInput.setValue("testpassword");
