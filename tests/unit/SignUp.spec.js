@@ -25,7 +25,7 @@ describe("SignUp", () => {
     const confirmPasswordInput = inputs[3];
 
     const Button = wrapper.findAllComponents({ name: "ElButton" });
-    const signUpButton = Button.at(0);
+    const signUpButton = Button[0];
     expect(usernameInput.exists()).toBe(true);
     expect(emailInput.exists()).toBe(true);
     expect(confirmPasswordInput.exists()).toBe(true);
