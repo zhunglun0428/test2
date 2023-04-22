@@ -18,7 +18,9 @@ describe("Login", () => {
  
   it("check all form-item exist", () => {
     const wrapper = mount(Login);
+    wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
+    wrapper.vm.$nextTick();
     const usernameInput = inputs.at(0);
     const passwordInput = inputs.at(1);
     const Button = wrapper.findAllComponents({ name: "ElButton" });
@@ -37,8 +39,9 @@ describe("Login", () => {
       .mockResolvedValue(mockResponse);
     const routerPushSpy = jest.spyOn(router, "push");
     const wrapper = mount(Login);
-
+    wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
+    wrapper.vm.$nextTick();
     const usernameInput = inputs.at(0);
     const passwordInput = inputs.at(1);
     
@@ -72,8 +75,9 @@ describe("Login", () => {
     const axiosPostSpy = jest.spyOn(axios, "post").mockRejectedValue(error);
     
     const wrapper = mount(Login);
-
+    wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
+    wrapper.vm.$nextTick();
     const usernameInput = inputs.at(0);
     const passwordInput = inputs.at(1);
     
