@@ -21,10 +21,10 @@ describe("Login", () => {
     wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
     wrapper.vm.$nextTick();
-    const usernameInput = inputs.at(0);
-    const passwordInput = inputs.at(1);
+    const usernameInput = inputs[0];
+    const passwordInput = inputs[1];
     const Button = wrapper.findAllComponents({ name: "ElButton" });
-    const loginButton = Button.at(0);
+    const loginButton = Button[0];
     expect(usernameInput.exists()).toBe(true);
     expect(passwordInput.exists()).toBe(true);
     expect(loginButton.exists()).toBe(true);
@@ -42,8 +42,8 @@ describe("Login", () => {
     wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
     wrapper.vm.$nextTick();
-    const usernameInput = inputs.at(0);
-    const passwordInput = inputs.at(1);
+    const usernameInput = inputs[0];
+    const passwordInput = inputs[1];
     
     
 
@@ -78,8 +78,8 @@ describe("Login", () => {
     wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
     wrapper.vm.$nextTick();
-    const usernameInput = inputs.at(0);
-    const passwordInput = inputs.at(1);
+    const usernameInput = inputs[0];
+    const passwordInput = inputs[1];
     
     
 
