@@ -16,7 +16,9 @@ jest.mock("@/router", () => ({
 describe("SignUp", () => {
   it("check all form-item exist", () => {
     const wrapper = mount(SignUp);
+    wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
+    wrapper.vm.$nextTick();
     const usernameInput = inputs.at(0);
     const emailInput = inputs.at(1);
     const passwordInput = inputs.at(2);
@@ -40,8 +42,9 @@ describe("SignUp", () => {
       .mockResolvedValue(mockResponse);
     const routerPushSpy = jest.spyOn(router, "push");
     const wrapper = mount(SignUp);
-
+    wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
+    wrapper.vm.$nextTick();
     const usernameInput = inputs.at(0);
     const emailInput = inputs.at(1);
     const passwordInput = inputs.at(2);
@@ -80,8 +83,9 @@ describe("SignUp", () => {
     const axiosPostSpy = jest.spyOn(axios, "post").mockRejectedValue(error);
     const routerPushSpy = jest.spyOn(router, "push");
     const wrapper = mount(SignUp);
-
+    wrapper.vm.$nextTick();
     const inputs = wrapper.findAllComponents({ name: "ElInput" });
+    wrapper.vm.$nextTick();
     const usernameInput = inputs.at(0);
     const emailInput = inputs.at(1);
     const passwordInput = inputs.at(2);
